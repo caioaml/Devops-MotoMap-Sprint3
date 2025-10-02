@@ -422,8 +422,25 @@ cd API-JAVA-CHALLENGE
 
 ### Passo 2: Criar o Banco de Dados
 ```bash
-chmod +x 1-criar-azuresql.sh
-./1-criar-azuresql.sh
+az group create --name rg-sql-dimdim --location eastus2
+
+az provider register --namespace Microsoft.Sql
+
+az sql server create \
+--name sql-server-dimdim-rm9999-eastus2 \
+--resource-group rg-sql-dimdim \
+--location eastus2 \
+--admin-user user-dimdim \
+--admin-password 'Fiap@2tdsvms' \
+--enable-public-network true
+
+az sql db create \
+--resource-group rg-sql-dimdim \
+--server sql-server-dimdim-rm9999-eastus2 \
+--name db-dimdim \
+--service-objective Basic \
+--backup-storage-redundancy Local \
+--zone-redundant false
 ```
 **Importante:** Anote as credenciais que aparecerem!
 
