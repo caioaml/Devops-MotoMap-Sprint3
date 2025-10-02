@@ -427,17 +427,17 @@ az group create --name rg-sql-dimdim --location eastus2
 az provider register --namespace Microsoft.Sql
 
 az sql server create \
---name sql-server-dimdim-rm9999-eastus2 \
---resource-group rg-sql-dimdim \
+--name sql-server-dimdim-rm556325-eastus2 \
+--resource-group rg-linux-free \
 --location eastus2 \
---admin-user user-dimdim \
+--admin-user user-motomap \
 --admin-password 'Fiap@2tdsvms' \
 --enable-public-network true
 
 az sql db create \
---resource-group rg-sql-dimdim \
+--resource-group rg-linux-free \
 --server sql-server-dimdim-rm9999-eastus2 \
---name db-dimdim \
+--name db-motomap \
 --service-objective Basic \
 --backup-storage-redundancy Local \
 --zone-redundant false
