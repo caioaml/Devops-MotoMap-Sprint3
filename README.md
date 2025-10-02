@@ -15,6 +15,10 @@
 
 ---
 
+### Link video YouTube: https://www.youtube.com/watch?v=yQ5YLQ9DLhE
+
+### Link da solução JAVA: https://github.com/CmarxS/API-JAVA
+
 ## 1. Descrição da Solução
 
 Este projeto implementa uma **API RESTful** completa para gerenciamento de motocicletas, desenvolvida com **Spring Boot 3.4.5** e **Java 21**. A aplicação permite operações CRUD (Create, Read, Update, Delete) sobre um catálogo de motos, incluindo informações como modelo, ano de fabricação, categoria e placa.
